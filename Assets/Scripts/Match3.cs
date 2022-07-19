@@ -71,6 +71,8 @@ public class Match3 : MonoBehaviour
             {
                 foreach (Point pnt in connected) //Elements removal 
                 {
+                    GameBoardScore.instance.AddPoint();
+                    GameBoardScore.instance.AddTime();
                     KillPiece(pnt);
                     Node node = getNodeAtPoint(pnt);
                     NodePiece nodePiece = node.getPiece();
